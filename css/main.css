@@ -41,9 +41,7 @@ header img {
 }
 nav {
     width: 100%;
-    background-color: rgba(34, 134, 84, 0.5);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(34, 134, 84, 0.8);
 }
 nav ul {
     list-style: none;
@@ -60,8 +58,9 @@ nav ul li a {
     color: white;
 }
 nav ul li a:hover {
-    background-color: rgba(51, 203, 128, 0.5);
+    /* background-color: rgba(51, 203, 128, 0.5); */
     transition: all 0.5s ease;
+    color: #ccc;
 }
 main {
     background-color: #ffffff;
@@ -74,7 +73,7 @@ main {
 main aside.right {
     width: 100%;
     height: 100%;
-    background-color: #BAEDD3;
+    /* background-color: #BAEDD3; */
 }
 main aside.right img {
     width: 100%;
@@ -245,6 +244,52 @@ ul {
     padding: 24px 32px;
     padding-bottom: 0;
 }
+.new-post h2 {
+    margin: 22px;
+    color: #444444;
+}
+.feed {
+    margin-top: 22px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.feed a {
+    text-decoration: none;
+    color: white;
+}
+.feed  .image {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+    background-position: 50%;
+    background-size: cover;
+}
+.feed .image::after {
+    background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4));
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.feed .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 22px;
+}
+#Post_1 {
+    background-image: url(../images/post-1.png)
+}
+#Post_2 {
+    background-image: url(../images/iphone_8_large.jpg)
+}
+
+.backdrop-filter {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
 
 @media only screen and (min-width: 415px) {
     .product {
@@ -290,10 +335,8 @@ ul {
         left: 0;
         right: 0;
         padding: 24px 32px;
-        background-color: rgba(47, 47, 47, 0.5);
+        background-color: rgba(47, 47, 47, 0.8);
         color: #fff;
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        backdrop-filter: saturate(180%) blur(20px);
         transition: all 1s ease;
     }
     .item:hover .summary {
