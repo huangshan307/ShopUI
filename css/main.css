@@ -172,10 +172,29 @@ footer > div > * {
 }
 .ads {
     margin: 22px;
-    margin-bottom: 0;
+    height: 100%;
+    text-align: center;
+    background-color: #efefef;
 }
 .ads img {
     width: 100%;
+}
+.btn {
+    display: block;
+    margin: 22px;
+    text-decoration: none;
+    padding: 12px 22px;
+    background-color: transparent;
+    color: #228654;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 2px solid #228654;
+}
+.btn:hover {
+    background-color: #228654;
+    color: #ffffff;
+    border-color: transparent;
 }
 .more {
     color: #dddddd;
@@ -233,7 +252,7 @@ ul {
     line-height: 48px;
 }
 .showcase {
-    min-height: 300px;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -245,7 +264,6 @@ ul {
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: -1000;
 }
 #iphone-8 {
     background-color: #f9f0eb;
@@ -319,7 +337,7 @@ ul {
 }
 @media only screen and (min-width: 1025px) {
     .container {
-        width: 70%;
+        width: 85%;
     }
     main > div > * {
         float: left;
@@ -357,12 +375,12 @@ ul {
         display: block;
     }
     .showcase {
-        height: 1000px;
+        height: 100vh;
 
     }
     .showcase .ytb {
         width: 1920px;
-        height: 1080px;
+        height: 100vh;
 
     }
 }
