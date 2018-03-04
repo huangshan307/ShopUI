@@ -44,6 +44,13 @@ nav {
     background-color: rgba(34, 134, 84, 0.8);
     text-align: center;
 }
+nav.product-nav.fixed {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #ddd;
+}
+nav.product-nav.fixed ul li > a, nav.product-nav.fixed h1.nav-title, nav.product-nav.fixed a#mobileBtn {
+    color: #444444;
+}
 nav ul {
     list-style: none;
     margin: 0;
@@ -63,6 +70,13 @@ nav ul li a:hover {
     transition: all 0.5s ease;
     color: #ccc;
 }
+nav .nav-title {
+    line-height: 64px;
+    color: white;
+}
+
+
+/*****  Main  ******/
 main {
     background-color: #ffffff;
 }
@@ -87,10 +101,10 @@ hr {
     background-color: #c0c8c9;
     background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
 }
-
+/* 
 footer > div > * {
     padding: 22px 30px;
-}
+} */
 .text a, .bigFooterRow a {
     text-decoration: none;
     color: #666666;
@@ -247,23 +261,10 @@ ul {
 #iPhoneRed {
     background-color: #ffd1d5;
 }
-.showcase h2 {
-    font-size: 48px;
-    line-height: 48px;
-}
+
 .showcase {
-    min-height: 100vh;
     position: relative;
-    overflow: hidden;
-}
-.showcase .ytb {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
 }
 #iphone-8 {
     background-color: #f9f0eb;
@@ -284,7 +285,7 @@ ul {
 }
 .feed:hover .image {
     transform: scale(1.3,1.3);
-    transition: all 3s ease;
+    transition: all 1s ease;
 }
 .feed a {
     text-decoration: none;
@@ -323,6 +324,143 @@ ul {
     backdrop-filter: saturate(180%) blur(20px);
 }
 
+.mobile-btn {
+    display: none;
+}
+
+/********** Product **********/
+.section {
+    padding: 24px 0;
+}
+.entry-content {
+    width: 100%;
+}
+.post-grid {
+    display: block;
+    grid-template-columns: 1fr 1fr 10px 80% 10px 1fr 1fr;
+}
+.post-grid > * {
+    grid-column: 4;
+}
+.grid-2 {
+    grid-column: 2/-2;
+}
+.grid-1 {
+    grid-column: 1/-1;
+}
+.center {
+    text-align: center;
+}
+.typography-headline-super {
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -.015em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.typography-manifesto {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: .004em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.typography-headline-reduced {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.typography-tout {
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 600;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.post-grid .post-image.medium {
+    grid-column: 2/-2;
+    margin-bottom: 24px;
+}
+.post-grid > .post-image.large {
+    grid-column: 1 / -1;
+    margin: 24px 0;
+}
+.no-pad-bot {
+    padding-bottom: 0;
+}
+.post-image img {
+    width: 100%;
+}
+.design-film {
+    position: relative;
+    height: 490px;
+    background-image: url(../images/design_film_large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.design-film .design-film_detail {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: white;
+}
+#designFilm {
+    display: inline;
+    color: white;
+}
+.ytb {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.ytb > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/****** Popup ******/
+.popup {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.fullHeight {
+    height: 100vh;
+    overflow: hidden;
+}
+.tai-tho {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 12px 16px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.popup.hide {
+    display: none !important;
+}
+
+.popup.show {
+    display: block !important;
+}
+
 @media only screen and (min-width: 415px) {
     .product {
         grid-template-columns: auto auto;
@@ -333,6 +471,63 @@ ul {
         grid-gap: 22px;
         text-align: left;
         width: 100%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /**********  MENU  ***********/
+    header {
+        height: 100%;
+    }
+    header img {
+        width: 50%;
+        margin: 0;
+    }
+    nav ul.main-menu {
+        display: none;
+        text-align: left;
+        border-top: 1px solid #ccc;
+        width: 100%;
+    }
+    nav ul.main-menu li {
+        display: block;
+    }
+    nav .mobile-btn {
+        display: block;
+        line-height: 64px;
+        color: white;
+        font-size: 30px;
+    }
+    #mobileBtn {
+        margin-right: 12px;
+    }
+    /**** Product ****/
+    .post-grid p, .post-grid h1, .post-grid h2, .post-grid h3 {
+        padding: 0 24px;
+    }
+    .design-film {
+        background-position: 50%;
+    }
+    .typography-headline-super {
+        font-size: 48px;
+        line-height: 1.08365;
+        font-weight: 600;
+        letter-spacing: -.003em;
+        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+    .typography-manifesto {
+        margin-top: 18px;
+    }
+    .entry-content {
+        text-align: left;
+    }
+    .center-in-med-and-up {
+        text-align: left;
+    }
+    .hide {
+        display: none !important;
+    }
+    .show {
+        display: block !important;
     }
 }
 @media only screen and (min-width: 1025px) {
@@ -374,13 +569,11 @@ ul {
     .item:hover .summary {
         display: block;
     }
-    .showcase {
-        height: 100vh;
-
+    /**** Product ****/
+    .post-grid {
+        display: grid;
     }
-    .showcase .ytb {
-        width: 1920px;
-        height: 100vh;
-
+    .popup .container {
+        width: 55%;
     }
 }

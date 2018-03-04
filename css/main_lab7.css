@@ -1,0 +1,57 @@
+#top-header {
+    background-color: #228654;
+}
+#top-header .header {
+    color: #fff;
+}
+#top-header a.header {
+    margin-top: 16px;
+    line-height: 110px;
+    font-size: 48px;
+}
+#top-header nav {
+    background-image: linear-gradient( 135deg, #74DCA8 10%, #228654 100%);
+}
+#top-header .button-collapse {
+    position: absolute;
+    top: 1em;
+    color: white;
+    z-index: 2;
+}
+#top-header .fixed {
+    position: fixed;
+}
+#top-header .fixed nav {
+    webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255,255,255,0.7);
+    background-image: inherit;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+}
+#top-header .fixed nav a {
+    color: #444444;
+}
+.header.page-title {
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 600;
+}
+.main-content {
+    margin-bottom: 0;
+}
+.main-content > .col {
+    padding: 0;
+}
+.top-description {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: .004em;
+}
+.showcaseFull {
+    height: 100vh;
+}
+.section_2 {
+    position: relative;
+}
