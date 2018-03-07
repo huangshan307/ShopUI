@@ -1,0 +1,45 @@
+body {
+    
+    main {
+        .slides-show {
+            .carousel.slide {
+                .carousel-inner {
+                    .carousel-item {
+                        .carousel-caption {
+                            background-color: rgba(68, 68, 68, 0.9);
+                        }
+                    }
+                }
+            }
+        }
+        .reason-set {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 24px;
+            .star-container {
+                display: inline-block;
+                position: relative;
+                .tiny-star {
+                    background: url(../images/star-none.png);
+                    height: 14px;
+                    width: 69px;
+                    .current-rating {
+                        background: url(../images/star.png) left bottom;
+                        height: 14px;
+                    }
+                }
+            }
+            .product-price {
+                span {
+                    display: block;
+                    font-size: 12px;
+                }
+                .full-price {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}

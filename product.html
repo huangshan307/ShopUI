@@ -4,190 +4,230 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LAB 7</title>
+    <title>Book Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/animate.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
+
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <a class="logo" href="#">
-                <!-- <img class="logo-set" src="images/logo-set-2x.png" alt=""> -->
-                <img src="images/logo.png" alt="">
-            </a>
-        </div>
-    </header>
-    <nav class="sticky-nav backdrop-filter product-nav clearfix">
-        <div class="container">
-            <a href="#!" id="mobileBtn" data-action="show" class="mobile-btn right">
-                <i class="fas fa-bars"></i>
-            </a>
-            <a href="/">
-                <h1 class="header page-title title nav-title left">iPhone X</h1>
-            </a>
-            <ul class="main-menu right animated">
-                <li>
-                    <a href="#">Laptop</a>
-                </li>
-                <li>
-                    <a href="#">Mobile</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <div class="clearfix">
-            <div class="section showcase">
-                <div class="entry-content">
-                    <div class="post-grid">
-                        <p class="post-image center">
-                            <img src="images/iphoneX.png" alt="">
-                        </p>
-                        <p></p>
-                        <h2 class="big-title typography-headline-super center center-in-med-and-up">iPhone X</h2>
-                        <p class="typography-manifesto center center-in-med-and-up">"iPhone X giá" là cụm từ được rất nhiều người mong chờ muốn biết và tìm kiếm trên Google bởi đây
-                            là chiếc điện thoại mà Apple kỉ niệm 10 năm iPhone đầu tiên được bán ra.</p>
-                        <div class="post-image large no-pad-bot design-film">
-                            <!-- <img src="images/design_film_large.jpg" alt=""> -->
-                            <div class="design-film_detail">
-                                <h2 class="typography-headline-reduced">
-                                    Design Film
-                                </h2>
-                                <a href="#!" id="designFilm" class="btn">Watch
-                                    <i class="far fa-play-circle"></i>
-                                </a>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-book d-inline-block align-top border-1 border-primary bg-primary text-light p-2 rounded-circle"></i> Book Shop
+                </a>
+                <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                    <form class="form-inline my-2 my-lg-0 w-100">
+                        <div class="input-group w-100 mr-1">
+                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
+                                aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn bg-primary text-light my-2 my-sm-0" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </div>
                         </div>
-                        <h3 class="grid-2 typography-tout">Thiết kế đột phá</h3>
-                        <p class="post-image medium">
-                            <img src="images/all-screen.png" alt="">
-                        </p>
-                        <p class="center center-in-med-and-up">Như các bạn cũng đã biết thì đã 4 năm kể từ iPhone 6 và iPhone 6 Plus Apple vẫn chưa có thay đổi
-                            nào đáng kể trong thiết kế của mình.
-                        </p>
-                        <p class="center center-in-med-and-up">
-                            Nhưng với iPhone X thì đó lại là 1 câu chuyện hoàn toàn khác, máy chuyển qua sử dụng màn hình tỉ lệ 19,5:9 mới mẻ với phần
-                            diện tích hiển thị mặt trước cực lớn.
-                        </p>
-                        <h3 class="grid-2 typography-tout">Bảo mật mới với Face ID</h3>
-                        <p class="center center-in-med-and-up">
-                            Với sự trợ giúp của cụm camera TrueDept thì iPhone X có khả năng nhận diện khuôn mặt 3D của người dùng từ đó mở khóa chiếc
-                            iPhone một cách nhanh chóng.
-                        </p>
-                        <div class="post-image large no-pad-bot ">
-                            <img src="images/face_id_hero_large.jpg" alt="">
+                    </form>
+                </div>
+
+                <a href="#" class="btn btn-light mr-1">
+                    <i class="fas fa-user"></i>
+                    Tài khoản
+                </a>
+                <button class="btn btn-outline-dark mr-1">
+                    <i class="fas fa-shopping-cart"></i>
+                    Giỏ hàng
+                    <span class="badge badge-warning">4</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row my-3 main-product-info rounded border-0">
+                <div class="col-12 px-0">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb" style="background-color: transparent">
+                            <li class="breadcrumb-item">
+                                <a href="#">Trang chủ</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">Sách văn học nước ngoài</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Tiểu thuyết</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-4 product-image pl-0">
+                    <img src="images/product-1.jpg" class="w-100" alt="Product">
+                </div>
+                <div class="col-12 col-md-8 product-info">
+                    <h1 class="h3 font-weight-normal pb-3">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta (Bộ 2 Tập)</h1>
+                    <div class="product-block">
+                        <div class="display-price">
+                            <span class="h4 text-danger">₫&nbsp;139.000</span>
+                            <span class="text-muted">
+                                <small>Đã có VAT</small>
+                            </span>
                         </div>
-                        <h3 class="typography-headline-super center center-in-med-and-up">Các tính năng khác</h3>
-                        <a href="https://www.thegioididong.com/dtdd/iphone-x-64gb" target="_blank" class="btn center center-in-med-and-up">Tìm hiểu thêm</a>
-                        <div class="grid-1 ytb">
-                            <iframe src="https://www.youtube.com/embed/mW6hFttt_KE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
+                        <div class="price-money-info">
+                            <span class="text-muted">Tiết kiệm: </span>
+                            <span class="text-danger">30%</span>
+                            <span class="text-muted"> (₫&nbsp;60.000)</span>
+                        </div>
+                        <div class="full-price">
+                            <span class="text-muted">
+                                Giá gốc:
+                                <del>₫&nbsp;199.000</del>
+                            </span>
+                        </div>
+                        <div class="text-muted">
+                            <small>Chất lượng sách: </small>
+                            <small>Loại A</small>
+                        </div>
+                    </div>
+                    <div class="list-price-footer border-top mt-3">
+                        <div class="giftMessage my-3">
+                            <img src="images/gift.png" class="d-inline" alt="Gift Message" width="28" height="28">
+                            <p class="d-inline ml-3">
+                                <span class="font-weight-bold">Bạn muốn gói quà và gửi thiệp?</span> Hãy chọn hình thức gói quà ở bước thanh toán, Book Shop sẽ thực hiện gói quà và in thiệp với thông
+                                điệp riêng của bạn! - <a href="#!">Xem chi tiết</a>
+                            </p>
+                        </div>
+                        <div class="d-flex w-100">
+                            <div class="input-group mt-3 mr-2 w-100">
+                                <div class="input-group-prepend ">
+                                    <button id="cartMinus" class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" id="cartAmount" class="form-control" value="1">
+                                <div class="input-group-append">
+                                    <button id="cartPlus" class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <a href="#!" class="bg-warning btn text-light mt-3 d-inline">
+                                <i class="fas fa-cart-plus mr-3"></i> Thêm vào giỏ hàng</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="py-5 bg-light bg">
         <div class="container">
-            <div class="bigFooterRow clearfix">
-                <ul class="bigFooter-col-1">
-                    <h3>Amazon.com</h3>
-                    <li>
-                        <a href="#">Apple iPhone</a>
-                    </li>
-                    <li>
-                        <a href="#">Surface</a>
-                    </li>
-                    <li>
-                        <a href="#">Samsung</a>
-                    </li>
-                    <li>
-                        <a href="#">Dell</a>
-                    </li>
-                </ul>
-                <ul class="bigFooter-col-2">
-                    <h3>Phụ kiện</h3>
-                    <li>
-                        <a href="#">Sạc dự phòng</a>
-                    </li>
-                    <li>
-                        <a href="#">Cáp sạc</a>
-                    </li>
-                    <li>
-                        <a href="#">Tai nghe</a>
-                    </li>
-                    <li>
-                        <a href="#">Loa</a>
-                    </li>
-                    <li>
-                        <a href="#">Thẻ nhớ</a>
-                    </li>
-                    <li>
-                        <a href="#">Ốp lưng</a>
-                    </li>
-                </ul>
-                <ul class="bigFooter-col-3">
-                    <h3>Liên kết</h3>
-                    <li>
-                        <a href="https://fb.com" target="_blank">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com" target="_blank">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com" target="_blank">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="https://thegioididong.com" target="_blank">Thế giới di động</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="text">
-                <hr>
-                <p>Designed by Sơn Phạm | Bài Lab 6</p>
-                <p>Contact:
-                    <a href="http://fb.com/huangshan307" target="_blank">Facebook</a> |
-                    <a href="https://twitter.com/huangshan307" target="_blank">Twitter</a>
-                </p>
-                <p>Email:
-                    <a href="mailto:sonphse63195@fpt.edu.vn" target="_top">SonPHSE63195@fpt.edu.vn</a>
-                </p>
-                <p>
-                    <a href="https://huangshan307.github.io/ShopUI/" target="_blank">GitHub</a>
-                </p>
+            <div class="row">
+                <div class="col-12 col-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                    </svg>
+                    <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Cool stuff</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Random feature</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Team feature</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Stuff for developers</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Another one</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Last time</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Resource</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Resource name</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Another resource</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Final resource</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Business</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Education</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Government</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Gaming</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Team</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Locations</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Privacy</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Terms</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
-    <div class="popup backdrop-filter hide">
-        <div class="popup-header center clearfix">
-            <div class="tai-tho">
-                <p class="typography-headline-reduced">Introduce iPhone X</p>
-            </div>
-            <a href="#!" id="popupBtnClose" class="btn right">
-                <i class="fas fa-times-circle"></i>
-            </a>
-        </div>
-        <div class="container">
-            <video width="100%" height="100%" id="video_1" class="video" controls>
-                <!-- <source src="media/iphone-x-introduce.mp4" type="video/mp4"> -->
-                <source src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1920x1080h.mp4"
-                    type="video/mp4"> Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

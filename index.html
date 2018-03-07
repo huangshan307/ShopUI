@@ -1,376 +1,508 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LAB 6</title>
+    <title>Book Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
+
 </head>
+
 <body>
     <header>
-        <div class="container">
-            <a class="logo" href="#">
-                <!-- <img class="logo-set" src="images/logo-set-2x.png" alt=""> -->
-                <img src="images/logo.png" alt="">
-            </a>
-            <a href="#!" class="mobile_btn">Click</a>
-        </div>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-book d-inline-block align-top border-1 border-primary bg-primary text-light p-2 rounded-circle"></i> Book Shop
+                </a>
+                <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                    <form class="form-inline my-2 my-lg-0 w-100">
+                        <div class="input-group w-100 mr-1">
+                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
+                                aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn bg-primary text-light my-2 my-sm-0" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        
+                <a href="#" class="btn btn-light mr-1">
+                    <i class="fas fa-user"></i>
+                    Tài khoản
+                </a>
+                <button class="btn btn-outline-dark mr-1">
+                    <i class="fas fa-shopping-cart"></i>
+                    Giỏ hàng
+                    <span class="badge badge-warning">4</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
     </header>
-    <nav class="sticky-nav backdrop-filter">
-        <div class="container">
-            <ul class="main-menu">
-                <li>
-                    <a href="product.html">Product</a>
-                </li>
-                <li>
-                    <a href="#">Mobile</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <main>
-        <div class="container clearfix">
-            <div class="main-page">
-                <div class="ads clearfix">
-                    <div class="thumbnail">
-                        <img src="images/ads-2.png" alt="">
-                    </div>
-                    <div class="detail clearfix">
-                        <h3 class="title">Galaxy J7 Pro Giảm 1 triệu, trả góp 0%</h3>
-                        <a href="#buy" class="btn">Mua ngay</a>
+        <div class="container">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-7 col-xl-8 py-md-3 slides-show">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/slide-1.jpg" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Tháng 3 sách trẻ</h5>
+                                    <p>Nhập mã TRE20 để được giảm thêm 20% tất cả sách của NXB trẻ</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/slide-2.jpg" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Tháng 3 sách trẻ</h5>
+                                    <p>Nhập mã TRE20 để được giảm thêm 20% tất cả sách của NXB trẻ</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/slide-3.jpg" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Tháng 3 sách trẻ</h5>
+                                    <p>Nhập mã TRE20 để được giảm thêm 20% tất cả sách của NXB trẻ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
-               
-               
-            </div>
-            <aside class="right">
-                <!-- <img src="images/sides.png" alt=""> -->
-                <!-- <a href="https://www.thegioididong.com/" target="_blank"><img src="images/ads-1.png" alt=""></a> -->
-                <div class="new-post">
-                    <h2 class="title">New Technology</h2>
-                    <ul class="feed-list">
-                        <li class="feed">
-                            <a href="#">
-                                <div id="Post_1" class="image"></div>
-                                <div class="description">
-                                    <h3 class="title">Consumers in the Age of Assistance</h3>
-                                    <div class="detail">
-                                        <span class="category">Collection</span>
-                                        <span class="date">Jan 28</span>
-                                    </div>
-                                </div>
-                            </a>
+                <div class="col-12 col-md-5 col-xl-4 py-md-3 categories">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h2>Danh mục sách</h2>
                         </li>
-                        <li class="feed">
-                            <a href="#">
-                                <div id="Post_2" class="image"></div>
-                                <div class="description">
-                                    <h3 class="title">How to use guest mode on your Android phone</h3>
-                                    <div class="detail">
-                                        <span class="category">Mobile</span>
-                                        <span class="date">Feb 5</span>
-                                    </div>
-                                </div>
-                            </a>
+                        <li class="list-group-item">
+                            <a href="#">Sách bán chạy</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Sách mới phát hành</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Sách ngoại văn</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Sách kinh tế</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Sách văn học nước ngoài</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Sách khoa học & công nghệ</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Sách chuyên ngành</a>
                         </li>
                     </ul>
                 </div>
-            </aside>
+            </div>
+            <div class="row audioBook mt-3">
+                <div class="col-12">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250 border-0" style="background-color: #e0f7fa;">
+                        <div class="card-body d-flex flex-column audio-book">
+                            <h3 class="mb-0 ml-5 mt-5">
+                                <a class="text-dark" href="#">Audio Book Now Available</a>
+                            </h3>
+                            <p class="ml-5">
+                                <a href="#" class="btn btn-outline-dark mt-5">Tìm hiểu thêm</a>
+                            </p>
+                        </div>
+                        <img class="card-img-right flex-auto d-sm-block" style="width: 50%; height: 50%;" src="images/audio-book.webp" data-holder-rendered="true">
+                    </div>
+                </div>
+            </div>
+            <div class="row product-list">
+                <div class="col-12 product-header py-md-3 mb-sm-3 mb-md-0 clearfix">
+                    <h3 class="title float-left">TOP sách bán chạy trong tháng</h3>
+                    <button type="button" class="btn btn-outline-success float-right d-none d-md-inline-block">Xem tất cả</button>
+                </div>
+                <div class="col-12 product-content py-md-3">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100 show-toolips" src="images/product-1.jpg" alt="Card image cap" ata-toggle="tooltip" data-placement="bottom"
+                                    title="Bộ 2 tập - Tặng kèm 1 Poster & 3 Postcard - Số lượng có hạn">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h5>
+                                        <span class="badge badge-danger float-lg-right">-30%</span>
+                                        <p class="card-text text-truncate">
+                                            Triệu Kiều Kiến
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 90%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ199.000</span>
+                                            <span class="display-price">đ139.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Gọi Em Bằng Tên Anh</h5>
+                                        <span class="badge badge-danger float-lg-right">-20%</span>
+                                        <p class="card-text text-truncate">
+                                            André Aciman
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ98.000</span>
+                                            <span class="display-price">đ78.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Cởi Trói Linh Hồn</h5>
+                                        <span class="badge badge-danger float-lg-right">-20%</span>
+                                        <p class="card-text text-truncate">
+                                            Michael A. Singer
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ88.000</span>
+                                            <span class="display-price">đ70.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Cây Chuối Non Đi Giày Xanh</h5>
+                                        <span class="badge badge-danger float-lg-right">-30%</span>
+                                        <p class="card-text text-truncate">
+                                            Nguyễn Nhật Ánh
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ110.000</span>
+                                            <span class="display-price">đ77.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-5.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Đi Tìm Lẽ Sống</h5>
+                                    <p class="card-text">
+                                        Viktor Emil Frankl
+                                    </p>
+                                    <p class="product-price">
+                                        68.000 đ
+                                    </p>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="row product-list">
+                <div class="col-12 product-header py-md-3 mb-sm-3 mb-md-0 clearfix">
+                    <h3 class="title float-left">Sách mới phát hành</h3>
+                    <button type="button" class="btn btn-outline-success float-right d-none d-md-inline-block">Xem tất cả</button>
+                </div>
+                <div class="col-12 product-content py-md-3">
+                    <div class="row">
+
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-1.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h5>
+                                        <p class="card-text text-truncate">
+                                            Triệu Kiều Kiến
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 90%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ199.000</span>
+                                            <span class="display-price">đ139.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Gọi Em Bằng Tên Anh</h5>
+                                        <p class="card-text text-truncate">
+                                            André Aciman
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ98.000</span>
+                                            <span class="display-price">đ78.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Cởi Trói Linh Hồn</h5>
+                                        <p class="card-text text-truncate">
+                                            Michael A. Singer
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ88.000</span>
+                                            <span class="display-price">đ70.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-xl-3 d-flex d-xl-flex mb-3">
+                            <div class="card">
+                                <img class="card-img-top w-100" src="images/product-4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="detail mb-5">
+                                        <h5 class="card-title text-truncate">Cây Chuối Non Đi Giày Xanh</h5>
+                                        <p class="card-text text-truncate">
+                                            Nguyễn Nhật Ánh
+                                        </p>
+                                    </div>
+                                    <div class="reason-set clearfix">
+                                        <div class="star-container d-none d-md-inline-block">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                        <p class="product-price float-right">
+                                            <span class="full-price">đ110.000</span>
+                                            <span class="display-price">đ77.000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <section class="section">
+
+        <div class="bg-dark text-light register">
             <div class="container">
-
-                <section class="section">
-                    <div class="category clearfix">
-                        <h2 class="title left">Thiết bị nổi bật</h2>
-                        <ul class="right">
-                            <li>
-                                <a href="#" class="active">All</a>
-                            </li>
-                            <li>
-                                <a href="#">Apple iPhone</a>
-                            </li>
-                            <li>
-                                <a href="#">Samsung</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop</a>
-                            </li>
-                            <li>
-                                <a href="#">Mac</a>
-                            </li>
-                        </ul>
+                <div class="row py-md-3 mb-3 mb-md-0">
+                    <div class="col-12 col-md-4">
+                        <img src="images/mail.png" class="w-25 mb-3" alt="">
+                        <h2>ĐĂNG KÝ NHẬN EMAIL</h2>
+                        <p class="caption">Đăng ký để nhận thông tin sách mới, sách bán chạy và khuyến mãi từ Book Shop</p>
                     </div>
-                    <div class="product">
-                        <div id="Surface" class="item laptop">
-                            <div class="image">
-                                <img src="images/laptop-3.png" alt="Laptop">
-                                <div class="gift backdrop-filter">
-                                    <img src="images/gift.png" alt="gift" title="Mua quà tặng kèm thẻ nhớ"> Giảm giá 50%
-                                </div>
+                    <div class="col-12 col-md-8">
+                        <div class="input-group input-group-lg py-5">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-lg">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
                             </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>Surface Pro 4</h2>
-                                    <div class="description">
-                                        <p class="price">
-                                            <span class="sale">$1800</span> $1000</p>
-                                        <p class="summary backdrop-filter">
-                                            Mua 1 tặng 1, tặng office 365 5 năm miễn phí, 1 TB onedrive lưu trữ không giới hạn, và nhiều ưu đãi khác.
-                                            <a href="#buy" class="more">Mua ngay</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="item laptop">
-                            <div class="image">
-                                <img src="images/laptop-4.png" alt="Laptop">
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>Mi Notebook</h2>
-                                    <div class="description">
-                                        <p class="price">
-                                            <span class="sale">$1200</span> $999.99</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="item laptop">
-                            <div class="image">
-                                <img src="images/laptop-5.png" alt="Laptop">
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>S Notebook</h2>
-                                    <div class="description">
-                                        <p class="price">$696.969</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="item phone">
-                            <div class="image">
-                                <img src="images/phone-1.png" alt="Phone">
-                                <div class="gift backdrop-filter">
-                                    <img src="images/gift.png" alt="gift" title="Mua quà tặng kèm thẻ nhớ"> Nhiều khuyến mãi
-                                </div>
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>Goole Pixel XL 2</h2>
-                                    <div class="description">
-                                        <p class="price">$29.9</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div id="iPhoneRed" class="item phone">
-                            <div class="image">
-                                <img src="images/phone-2.png" alt="Phone">
-                                <div class="gift backdrop-filter">
-                                    <img src="images/gift.png" alt="gift" title="Mua quà tặng kèm thẻ nhớ"> Bảo hành trọn gói
-                                </div>
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>iPhone 7 Red</h2>
-                                    <div class="description">
-                                        <p class="price">$79.9</p>
-                                        <p class="summary backdrop-filter">
-                                            Giảm 500.000 VND khi thanh toán bằng card visit hoặc tiền mặt.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="item phone">
-                            <div class="image">
-                                <img src="images/phone-3.png" alt="Phone">
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>Xiaomi Mi Mix</h2>
-                                    <div class="description">
-                                        <p class="price">$69.96</p>
-                                        <p class="summary backdrop-filter">
-                                            Giảm 500.000 VND khi thanh toán bằng card visit hoặc tiền mặt.
-                                        </p>
-                                    </div>
-                                </div>
+                            <input type="email" class="form-control" placeholder="example@example.com" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                            <div class="input-group-append">
+                                <button class="btn bg-success text-light" type="button">Đăng ký</button>
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <section class="section">
-                    <div class="category clearfix">
-                        <h2 class="title left">Phụ kiện giá rẻ</h2>
-                        <ul class="right">
-                            <li>
-                                <a href="#">Cáp sạc</a>
-                            </li>
-                            <li>
-                                <a href="#">Thẻ nhớ</a>
-                            </li>
-                            <li>
-                                <a href="#">Tai nghe</a>
-                            </li>
-                            <li>
-                                <a href="#">Loa</a>
-                            </li>
-                            <li>
-                                <a href="#" class="active">Xem tất cả 3737 phụ kiện</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product">
-                        <div class="item phukien">
-                            <div class="image">
-                                <img src="images/phukien-1.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>Cáp Micro USB</h2>
-                                    <div class="description">
-                                        <p class="price">40.000đ
-                                            <span class="sale">70.000đ</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="item phukien">
-                            <div class="image">
-                                <img src="images/phukien-2.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>Tai nghe chụp tai k-123</h2>
-                                    <div class="description">
-                                        <p class="price">210.000đ
-                                            <span class="sale">300.000đ</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="item phukien">
-                            <div class="image">
-                                <img src="images/phukien-3.jpg" alt="">
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <h2>SDP 10.000 mAh</h2>
-                                    <div class="description">
-                                        <p class="price">170.000đ
-                                            <span class="sale">250.000đ</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                    </div>
-                </section>
-            </div>
-        </section>
-        <!-- <section class="section showcase" id="iphone-8">
-            <div class="container clearfix">
-                <div class="title">
-                    <h2>iPhone 8 new product from Apple</h2>
-                </div>
-                <div class="image">
-                    <img src="images/iphone_8_large.jpg" alt="">
                 </div>
             </div>
-            <iframe class="ytb" id="player" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" src="https://www.youtube.com/embed/m8_Y-eH5cwg?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;start=0&amp;iv_load_policy=3&amp;enablejsapi=1&amp;rel=0"></iframe>
-        </section> -->
+        </div>
     </main>
-    <footer>
+    <footer class="py-5 bg-light">
         <div class="container">
-            <div class="bigFooterRow clearfix">
-                <ul class="bigFooter-col-1">
-                    <h3>Amazon.com</h3>
-                    <li>
-                        <a href="#">Apple iPhone</a>
-                    </li>
-                    <li>
-                        <a href="#">Surface</a>
-                    </li>
-                    <li>
-                        <a href="#">Samsung</a>
-                    </li>
-                    <li>
-                        <a href="#">Dell</a>
-                    </li>
-                </ul>
-                <ul class="bigFooter-col-2">
-                    <h3>Phụ kiện</h3>
-                    <li>
-                        <a href="#">Sạc dự phòng</a>
-                    </li>
-                    <li>
-                        <a href="#">Cáp sạc</a>
-                    </li>
-                    <li>
-                        <a href="#">Tai nghe</a>
-                    </li>
-                    <li>
-                        <a href="#">Loa</a>
-                    </li>
-                    <li>
-                        <a href="#">Thẻ nhớ</a>
-                    </li>
-                    <li>
-                        <a href="#">Ốp lưng</a>
-                    </li>
-                </ul>
-                <ul class="bigFooter-col-3">
-                    <h3>Liên kết</h3>
-                    <li>
-                        <a href="https://fb.com" target="_blank">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com" target="_blank">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com" target="_blank">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="https://thegioididong.com" target="_blank">Thế giới di động</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="text">
-                <hr>
-                <p>Designed by Sơn Phạm | Bài Lab 6</p>
-                <p>Contact:
-                    <a href="http://fb.com/huangshan307" target="_blank">Facebook</a> |
-                    <a href="https://twitter.com/huangshan307" target="_blank">Twitter</a>
-                </p>
-                <p>Email: <a href="mailto:sonphse63195@fpt.edu.vn" target="_top">SonPHSE63195@fpt.edu.vn</a></p>
-                <p><a href="https://huangshan307.github.io/ShopUI/" target="_blank">GitHub</a></p>
+            <div class="row">
+                <div class="col-12 col-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                    </svg>
+                    <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Cool stuff</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Random feature</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Team feature</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Stuff for developers</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Another one</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Last time</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Resource</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Resource name</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Another resource</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Final resource</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Business</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Education</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Government</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Gaming</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Team</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Locations</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Privacy</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Terms</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
