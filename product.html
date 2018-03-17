@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 
@@ -17,12 +19,12 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg sticky-nav">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <i class="fas fa-book d-inline-block align-top border-1 border-primary bg-primary text-light p-2 rounded-circle"></i> Book Shop
+                <a class="navbar-brands d-none d-lg-block" href="index.html">
+                    <img src="images/logo.png" class="w-50 " alt="BookShop Logo">
                 </a>
-                <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                <div class="d-none d-lg-block w-100">
                     <form class="form-inline my-2 my-lg-0 w-100">
                         <div class="input-group w-100 mr-1">
                             <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
@@ -35,22 +37,53 @@
                         </div>
                     </form>
                 </div>
-
-                <a href="#" class="btn btn-light mr-1">
-                    <i class="fas fa-user"></i>
-                    Tài khoản
+                <a href="/index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
+                    <i class="fas fa-home"></i>
                 </a>
-                <button class="btn btn-outline-dark mr-1">
+                <a href="/search.html" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="btn btn-light mr-1 " title="Tài khoản">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="btn btn-outline-dark mr-1" data-toggle="modal" data-target="#myCart">
                     <i class="fas fa-shopping-cart"></i>
-                    Giỏ hàng
                     <span class="badge badge-warning">4</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
         </nav>
+        <div class="secondary-navbar bg-light">
+            <div class="w-100 clearfix bg-dark d-block d-lg-none">
+                <span class="mx-4 my-2 text-light float-left">DANH MỤC</span>
+                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-light"></i>
+                </button>
+            </div>
+            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="navbarSupportedContent">
+                <ul class="nav justify-content-center sp1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">BOOK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">TEXTBOOKS</a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">AUDIO BOOKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">MAGAZINES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="about.html">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main>
         <div class="container">
@@ -68,58 +101,205 @@
                         </ol>
                     </nav>
                 </div>
-                <div class="col-12 col-md-4 product-image pl-0">
-                    <img src="images/product-1.jpg" class="w-100" alt="Product">
+                <div class="col-12 col-md-4 product-image p-5 m-0">
+                    <img src="images/product-info.jpg" class="w-100" alt="Product">
                 </div>
                 <div class="col-12 col-md-8 product-info">
-                    <h1 class="h3 font-weight-normal pb-3">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta (Bộ 2 Tập)</h1>
-                    <div class="product-block">
-                        <div class="display-price">
-                            <span class="h4 text-danger">₫&nbsp;139.000</span>
-                            <span class="text-muted">
-                                <small>Đã có VAT</small>
-                            </span>
-                        </div>
-                        <div class="price-money-info">
-                            <span class="text-muted">Tiết kiệm: </span>
-                            <span class="text-danger">30%</span>
-                            <span class="text-muted"> (₫&nbsp;60.000)</span>
-                        </div>
-                        <div class="full-price">
-                            <span class="text-muted">
-                                Giá gốc:
-                                <del>₫&nbsp;199.000</del>
-                            </span>
-                        </div>
-                        <div class="text-muted">
-                            <small>Chất lượng sách: </small>
-                            <small>Loại A</small>
-                        </div>
-                    </div>
-                    <div class="list-price-footer border-top mt-3">
-                        <div class="giftMessage my-3">
-                            <img src="images/gift.png" class="d-inline" alt="Gift Message" width="28" height="28">
-                            <p class="d-inline ml-3">
-                                <span class="font-weight-bold">Bạn muốn gói quà và gửi thiệp?</span> Hãy chọn hình thức gói quà ở bước thanh toán, Book Shop sẽ thực hiện gói quà và in thiệp với thông
-                                điệp riêng của bạn! - <a href="#!">Xem chi tiết</a>
-                            </p>
-                        </div>
-                        <div class="d-flex w-100">
-                            <div class="input-group mt-3 mr-2 w-100">
-                                <div class="input-group-prepend ">
-                                    <button id="cartMinus" class="btn btn-outline-secondary" type="button">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
+                    <h1 class="h3 font-weight-normal pb-3">Đi Tìm Lẽ Sống (Tái Bản 2016)</h1>
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <div class="product-block">
+                                <div class="display-price">
+                                    <span class="h4 text-danger">₫&nbsp;54.000</span>
+                                    <span class="text-muted">
+                                        <small>Đã có VAT</small>
+                                    </span>
                                 </div>
-                                <input type="text" id="cartAmount" class="form-control" value="1">
-                                <div class="input-group-append">
-                                    <button id="cartPlus" class="btn btn-outline-secondary" type="button">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
+                                <div class="price-money-info">
+                                    <span class="text-muted">Tiết kiệm: </span>
+                                    <span class="text-danger">21%</span>
+                                    <span class="text-muted"> (₫&nbsp;14.000)</span>
+                                </div>
+                                <div class="full-price">
+                                    <span class="text-muted">
+                                        Giá gốc:
+                                        <del>₫&nbsp;64.000</del>
+                                    </span>
+                                </div>
+                                <div class="text-muted">
+                                    <small>Chất lượng sách: </small>
+                                    <small>Loại A</small>
                                 </div>
                             </div>
-                            <a href="#!" class="bg-warning btn text-light mt-3 d-inline">
-                                <i class="fas fa-cart-plus mr-3"></i> Thêm vào giỏ hàng</a>
+                            <div class="list-price-footer border-top mt-3">
+                                <div class="giftMessage my-3">
+                                    <img src="images/gift.png" class="d-inline" alt="Gift Message" width="28" height="28">
+                                    <p class="d-inline ml-3">
+                                        <span class="font-weight-bold">Bạn muốn gói quà và gửi thiệp?</span> Hãy chọn hình thức gói quà ở bước thanh toán,
+                                        Book Shop sẽ thực hiện gói quà và in thiệp với thông điệp riêng của bạn! -
+                                        <a href="#!">Xem chi tiết</a>
+                                    </p>
+                                </div>
+                                <div class="d-flex w-100">
+                                    <div class="input-group mt-3 mr-2 w-100">
+                                        <div class="input-group-prepend ">
+                                            <button id="cartMinus" class="btn btn-outline-secondary" type="button">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" id="cartAmount" class="form-control" value="1">
+                                        <div class="input-group-append">
+                                            <button id="cartPlus" class="btn btn-outline-secondary" type="button">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a href="#!" class="bg-warning btn text-light mt-3 d-inline">
+                                        <i class="fas fa-cart-plus mr-3"></i> Thêm vào giỏ hàng</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mt-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-left">Bạn cần hỗ trợ?</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted font-weight-normal text-left">Lời khuyên, sản phẩm,...</h6>
+                                    <p class="card-text h3 text-left">0123.456.789</p>
+                                    <a href="tel:0123.456.789" class="card-link btn btn-outline-success rounded-circle">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="product-detail" class="col-12 product-detail p-0 m-0 mt-5">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item" id="introduceBook">
+                                    <a class="nav-link active" href="#!" data-toggle="collapse" data-target="#introduce-book" aria-expanded="true" aria-controls="introduce-book">Giới thiệu sách</a>
+                                </li>
+                                <li class="nav-item" id="infoBook">
+                                    <a href="#!" class="nav-link" data-toggle="collapse" data-target="#info-book" aria-expanded="true" aria-controls="info-book">Thông tin sách</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div id="introduce-book" class="collapse show" aria-labelledby="introduceBook" data-parent="#product-detail">
+                                <h5 class="card-title">Đi Tìm Lẽ Sống (Tái Bản 2016)</h5>
+                                <p class="card-text">
+                                    Đi tìm lẽ sống của Viktor Frankl là một trong những quyển sách kinh điển của thời đại. Thông thường, nếu một quyển sách chỉ
+                                    có một đoạn văn, một ý tưởng có sức mạnh thay đổi cuộc sống của một người, thì chỉ riêng
+                                    điều đó cũng đã đủ để chúng ta đọc đi đọc lại và dành cho nó một chỗ trên kệ sách của
+                                    mình. Quyển sách này có nhiều đoạn văn như thế.
+                                </p>
+                                <p>
+                                    Trước hết, đây là quyển sách viết về sự sinh tồn. Giống như nhiều người Do Thái sinh sống tại Đức và Đông Âu khi ấy, vốn
+                                    nghĩ rằng mình sẽ được an toàn trong những năm 1930, Frankl đã trải qua khoảng thời gian
+                                    chịu nhiều nghiệt ngã trong trại tập trung và trại hủy diệt của Đức quốc xã. Điều kỳ
+                                    diệu là ông đã sống sót, cụm từ “thép đã tôi thế đấy” có thể lột tả chính xác trường
+                                    hợp này. Nhưng trong Đi tìm lẽ sống, tác giả ít đề cập đến những khó nhọc, đau thương,
+                                    mất mát mà ông đã trải qua, thay vào đó ông viết về những nguồn sức mạnh đã giúp ông
+                                    tồn tại. Ông chua xót kể về những tù nhân đã đầu hàng cuộc sống, mất hết hy vọng ở tương
+                                    lai và chắc hẳn là những người đầu tiên sẽ chết. Ít người chết vì thiếu thức ăn và thuốc
+                                    men, mà phần lớn họ chết vì thiếu hy vọng, thiếu một lẽ sống. Ngược lại, Frankl đã nuôi
+                                    giữ hy vọng để giữ cho mình sống sót bằng cách nghĩ về người vợ của mình và trông chờ
+                                    ngày gặp lại nàng. Ông còn mơ ước sau chiến tranh sẽ được thuyết giảng về các bài học
+                                    tâm lý ông đã học được từ trại tập trung Auschwitz. Rõ ràng có nhiều tù nhân khao khát
+                                    được sống đã chết, một số chết vì bệnh, một số chết vì bị hỏa thiêu. Trong tập sách này,
+                                    Frankl tập trung lý giải nguyên nhân vì sao có những người đã sống sót trong trại tập
+                                    trung của phát xít Đức hơn là đưa ra lời giải thích cho câu hỏi vì sao phần lớn trong
+                                    số họ đã không bao giờ trở về nữa.
+                                </p>
+                                <p>
+                                    Nhiệm vụ lớn lao nhất của mỗi người là tìm ra ý nghĩa trong cuộc sống của mình. Frankl đã nhìn thấy ba nguồn ý nghĩa cơ bản
+                                    của đời người: thành tựu trong công việc, sự quan tâm chăm sóc đối với những người thân
+                                    yêu và lòng can đảm khi đối mặt với những thời khắc gay go của cuộc sống. Đau khổ tự
+                                    bản thân nó không có ý nghĩa gì cả, chính cách phản ứng của chúng ta mới khoác lên cho
+                                    chúng ý nghĩa. Frankl đã viết rằng một người “có thể giữ vững lòng quả cảm, phẩm giá
+                                    và sự bao dung, hoặc người ấy có thể quên mất phẩm giá của con người và tự đặt mình ngang
+                                    hàng loài cầm thú trong cuộc đấu tranh khắc nghiệt để sinh tồn”. Ông thừa nhận rằng chỉ
+                                    có một số ít tù nhân của Đức quốc xã là có thể giữ được những phẩm chất ấy, nhưng “chỉ
+                                    cần một ví dụ như thế cũng đủ chứng minh rằng sức mạnh bên trong của con người có thể
+                                    đưa người ấy vượt lên số phận nghiệt ngã của mình”.
+                                </p>
+                                <a href="#" class="btn btn-primary">Mua ngay</a>
+                            </div>
+                            <div id="info-book" class="collapse text-left" aria-labelledby="infoBook" data-parent="#product-detail">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Tác giả: <span class="float-right"> Viktor Emil Frankl</span></li>
+                                    <li class="list-group-item">Nhà xuất bản: <span class="float-right"> Nxb Tổng hợp TP.HCM</span></li>
+                                    <li class="list-group-item">Mã sản phẩm: <span class="float-right"> 8935086839553</span></li>
+                                    <li class="list-group-item">Ngôn ngữ: <span class="float-right"> Tiếng Việt</span></li>
+                                    <li class="list-group-item">kích thước: <span class="float-right"> 14.5 x 20.5 cm</span></li>
+                                    <li class="list-group-item">Số trang: <span class="float-right"> 224</span></li>
+                                    <li class="list-group-item">Người dịch: <span class="float-right"> Nhiều người dịch</span></li>
+                                    <li class="list-group-item">Nhà phát hành: <span class="float-right"> Trí Việt</span></li>
+                                    <li class="list-group-item">khối lượng: <span class="float-right"> 264.00 gam</span></li>
+                                    <li class="list-group-item">Định dạng: <span class="float-right"> Bìa mềm</span></li>
+                                    <li class="list-group-item">Ngày phát hành: <span class="float-right"> 09/2016</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend col-12 m-0 p-0 my-5">
+                    <h3 class="display-4">Có thể bạn thích</h3>
+                    <div class="row owl-carousel owl-theme">
+                        <div id="item1" class="item col-12">
+                            <div class="row p-3">
+                                <div class="col-12 col-lg-5 p-3">
+                                    <img src="images/book-3.jpg" class="w-100" alt="">
+                                </div>
+                                <div class="col-12 col-lg-7 mt-5">
+                                    <h4>A Million Miles in a Thousand Years</h4>
+                                    <p class="author">Donald Miller</p>
+                                    <div class="reason-set">
+                                        <div class="star-container">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 90%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="item2" class="item col-12">
+                            <div class="row p-3">
+                                <div class="col-12 col-lg-5 p-3">
+                                    <img src="images/book-2.jpg" class="w-100" alt="">
+                                </div>
+                                <div class="col-12 col-lg-7 mt-5">
+                                    <h4>How To Be The PERFECT Dutch</h4>
+                                    <p class="author">Kathian Brands</p>
+                                    <div class="reason-set">
+                                        <div class="star-container">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 83%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="item3" class="item col-12">
+                            <div class="row p-3">
+                                <div class="col-12 col-lg-5 p-3">
+                                    <img src="images/book-1.png" class="w-100" alt="">
+                                </div>
+                                <div class="col-12 col-lg-7 mt-5">
+                                    <h4>A Step-by-Step Survival Guide</h4>
+                                    <p class="author">Agile</p>
+                                    <div class="reason-set">
+                                        <div class="star-container">
+                                            <div class="tiny-star">
+                                                <div class="current-rating" style="width: 90%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -219,6 +399,56 @@
             </div>
         </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="myCart" tabindex="-1" role="dialog" aria-labelledby="myCart" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Thông tin giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-flud">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="images/book-1.png" class="img-thumbnail" alt="">
+                            </div>
+                            <div class="col-8">
+                                <h3>A Step-by-Step Sutvival Guide</h3>
+                                <p class="author">Agile</p>
+                                <p class="display-price text-danger h4">₫&nbsp;54.000</p>
+                                <p>Số lượng: 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="cartErrorText" class="modal-body">
+                    The amount must be greater than 1.
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light text-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -227,6 +457,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 

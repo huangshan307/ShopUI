@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-nav">
+            <div class="container">
+                <a class="navbar-brands d-none d-lg-block" href="index.html">
+                    <img src="images/logo.png" class="w-50 " alt="BookShop Logo">
+                </a>
+                <div class="d-none d-lg-block w-100">
+                    <form class="form-inline my-2 my-lg-0 w-100">
+                        <div class="input-group w-100 mr-1">
+                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
+                                aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn bg-primary text-light my-2 my-sm-0" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="/index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="/search.html" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="btn btn-light mr-1 " title="Tài khoản">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="btn btn-outline-dark mr-1" data-toggle="modal" data-target="#myCart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge badge-warning">4</span>
+                </button>
+            </div>
+        </nav>
+        <div class="secondary-navbar bg-light">
+            <div class="w-100 clearfix bg-dark d-block d-lg-none">
+                <span class="mx-4 my-2 text-light float-left">DANH MỤC</span>
+                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapseTopNav" aria-expanded="false"
+                    aria-label="Toggle navigation" aria-controls="collapseTopNav">
+                    <i class="fas fa-bars text-light"></i>
+                </button>
+            </div>
+            <div id="collapseTopNav" class="container collapse navbar-collapse collapse-mb d-lg-block" id="navbarSupportedContent">
+                <ul class="nav justify-content-center sp1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">BOOK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">TEXTBOOKS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">AUDIO BOOKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">MAGAZINES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="about.html">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 main-category">
+                    <div class="row">
+                        <div id="categoryContent" class="col-12 col-lg-3 mt-3">
+                            <div id="categoryHeader" class="header clearfix bg-dark">
+                                <span class="float-left mx-3 my-2 text-light">Danh mục sách</span>
+                                <a class="btn btn-light float-right d-block d-lg-none" data-toggle="collapse" href="#collapseCategory" aria-expanded="true" aria-controls="collapseCategory">
+                                    <i class="fas fa-bars"></i>
+                                </a>
+                            </div>
+                            <div id="collapseCategory" class="collapse d-lg-block border" aria-labelledby="categoryHeader" data-parent="#categoryContent">
+                                <ul class="show list-group list-group-flush">
+                                    <li class="list-group-item">Sách Tiếng Việt</li>
+                                    <li class="list-group-item active">Sách văn học nước ngoài</li>
+                                    <li class="list-group-item">Sách kinh tế</li>
+                                    <li class="list-group-item">Sách thường thức - đời sống</li>
+                                    <li class="list-group-item">Sách thiếu nhi</li>
+                                    <li class="list-group-item">Sách tin học - ngoại ngữ</li>
+                                    <li class="list-group-item">Sách chuyên ngành</li>
+                                    <li class="list-group-item">Sách giáo khoa - giáo trình</li>
+                                    <li class="list-group-item">Tạp chí - văn phòng phẩm</li>
+                                </ul>
+                            </div>          
+                        </div>
+                        <div class="col-12 col-lg-9 category-show">
+                            <h3 class="display-4 mx-3">Mới phát hành</h3>
+                            <div class="row my-3">
+                                <div id="item1" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/book-3.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>A Million Miles in a Thousand Years</h4>
+                                            <p class="author d-none d-lg-block">Donald Miller</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 90%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ78.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="item2" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/book-2.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>How To Be The PERFECT Dutch</h4>
+                                            <p class="author d-none d-lg-block">Kathian Brands</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 83%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ78.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="display-4 mx-3">Sách văn học nước ngoài</h3>
+                            <div class="row my-3">
+                                <div id="item1" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/book-3.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>A Million Miles in a Thousand Years</h4>
+                                            <p class="author d-none d-lg-block">Donald Miller</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 90%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ78.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="item2" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/book-2.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>How To Be The PERFECT Dutch</h4>
+                                            <p class="author d-none d-lg-block">Kathian Brands</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 83%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ78.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="item3" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/book-1.png" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>A Step-by-Step Survival Guide</h4>
+                                            <p class="author d-none d-lg-block">Agile</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 90%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ78.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="item4" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/product-1.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>A Step-by-Step Survival Guide</h4>
+                                            <p class="author d-none d-lg-block">Agile</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 90%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ78.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="item5" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/product-2.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>Gọi Em Bằng Tên Anh</h4>
+                                            <p class="author d-none d-lg-block">André Acimen</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 90%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ78.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="item6" class="item col-12 col-lg-6">
+                                    <div class="row p-3">
+                                        <div class="col-5">
+                                            <img src="images/product-6.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h4>Địch Công Kỳ Án</h4>
+                                            <p class="author d-none d-lg-block">Agile</p>
+                                            <div class="reason-set">
+                                                <div class="star-container d-none d-lg-block">
+                                                    <div class="tiny-star">
+                                                        <div class="current-rating" style="width: 90%;"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="product-price">
+                                                    <span class="display-price">đ110.000</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Trước</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">...</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">23</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Tiếp</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-5 bg-light bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                    </svg>
+                    <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Cool stuff</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Random feature</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Team feature</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Stuff for developers</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Another one</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Last time</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Resource</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Resource name</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Another resource</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Final resource</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Business</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Education</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Government</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Gaming</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="text-muted" href="#">Team</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Locations</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Privacy</a>
+                        </li>
+                        <li>
+                            <a class="text-muted" href="#">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="myCart" tabindex="-1" role="dialog" aria-labelledby="myCart" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Thông tin giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-flud">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="images/book-1.png" class="img-thumbnail" alt="">
+                            </div>
+                            <div class="col-8">
+                                <h3>A Step-by-Step Sutvival Guide</h3>
+                                <p class="author">Agile</p>
+                                <p class="display-price text-danger h4">₫&nbsp;54.000</p>
+                                <p>Số lượng: 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
