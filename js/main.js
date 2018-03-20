@@ -28,25 +28,30 @@ function showCarousel() {
     $('.recommend .owl-carousel').owlCarousel({
         items: 2,
         loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
         nav: false,
+        responsive: {
+            1200: {
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+            }
+        }
     });
     $('.category-show .owl-carousel').owlCarousel({
         items: 2,
         loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
         nav: false,
+        responsive: {
+            1200: {
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+            }
+        }
     });
     $('.owl-carousel').owlCarousel({
         items: 4,
         loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
         stagePadding: 50,
         animateOut: 'slideOutDown',
         animateIn: 'flipInX',
@@ -60,7 +65,10 @@ function showCarousel() {
                 items: 2,
             },
             1200: {
-                items: 4
+                items: 4,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
             }
         }
     });
@@ -87,14 +95,27 @@ function addClassTab() {
 }
 
 function showStickyNav() {
-    var aboveHeight = $('header').outerHeight();
+    //lấy chiều cao của header
+    var navHeight = $('header').outerHeight();
+    var lastScrollTop = 0;
+    //$('.sticky-nav').addClass('position-static');
     $(window).scroll(function () {
-        if ($(window).scrollTop() > aboveHeight) {
+        // lấy vị trí thanh cuộn
+        // var top = $(window).scrollTop();
+        // lấy vị trí của thanh cuộn hiện tại
+        var currentScrollTop = $(this).scrollTop();
+        if (currentScrollTop < lastScrollTop) {
+            //khi thanh cuộn trượt lên
             $('.sticky-nav').addClass('fixed-top bg-light');
         }
         else {
+            //khi thanh cuộn trượt xuống
             $('.sticky-nav').removeClass('fixed-top bg-light');
         }
+        if (currentScrollTop == 0) {
+            $('.sticky-nav').removeClass('fixed-top bg-light');
+        }
+        lastScrollTop = currentScrollTop;
     });
 }
 
@@ -132,7 +153,7 @@ function inputCart(action) {
 function contactBtn() {
     var myEmail = $("#myEmail").val();
     var myPhoneNumber = $("#myPhoneNumber").val();
-    if ((myEmail == "") || (myPhoneNumber == "") ) {
+    if ((myEmail == "") || (myPhoneNumber == "")) {
         alert("Xin vui lòng nhập đầy đủ thông tin.");
     } else {
         if (!checkMail(myEmail))
