@@ -1,7 +1,7 @@
 $(document).ready(function () {
     addClassTab();
     // navbar sticky
-    showStickyNav();
+    // showStickyNav();
     // CartButton
     cartButton();
     // owl-carousel slides show product
@@ -95,27 +95,14 @@ function addClassTab() {
 }
 
 function showStickyNav() {
-    //lấy chiều cao của header
-    var navHeight = $('header').outerHeight();
-    var lastScrollTop = 0;
-    //$('.sticky-nav').addClass('position-static');
+    var aboveHeight = $('header').outerHeight();
     $(window).scroll(function () {
-        // lấy vị trí thanh cuộn
-        // var top = $(window).scrollTop();
-        // lấy vị trí của thanh cuộn hiện tại
-        var currentScrollTop = $(this).scrollTop();
-        if (currentScrollTop < lastScrollTop) {
-            //khi thanh cuộn trượt lên
+        if ($(window).scrollTop() > aboveHeight) {
             $('.sticky-nav').addClass('fixed-top bg-light');
         }
         else {
-            //khi thanh cuộn trượt xuống
             $('.sticky-nav').removeClass('fixed-top bg-light');
         }
-        if (currentScrollTop == 0) {
-            $('.sticky-nav').removeClass('fixed-top bg-light');
-        }
-        lastScrollTop = currentScrollTop;
     });
 }
 
@@ -154,12 +141,12 @@ function contactBtn() {
     var myEmail = $("#myEmail").val();
     var myPhoneNumber = $("#myPhoneNumber").val();
     if ((myEmail == "") || (myPhoneNumber == "")) {
-        alert("Xin vui lòng nhập đầy đủ thông tin.");
+        alert("Please enter full your information.");
     } else {
         if (!checkMail(myEmail))
-            alert("Địa chỉ email của bạn không đúng định dạng, Xin vui lòng thử lại!");
+            alert("Your email incorrect. Try again!");
         else if (!checkPhoneNumber(myPhoneNumber)) {
-            alert("Số điện thoại của bạn không đúng định dạng, Xin vui lòng thử lại!");
+            alert("Your phone number incorrect. Try again!");
         } else {
             $("#contactEmail").text(myEmail);
             $("#contactPhoneNumber").text(myPhoneNumber);

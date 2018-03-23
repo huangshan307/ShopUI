@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Book Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/main.css">
-
-
 </head>
 
 <body>
@@ -25,7 +24,7 @@
                 <div class="d-none d-lg-block w-100">
                     <form class="form-inline my-2 my-lg-0 w-100">
                         <div class="input-group w-100 mr-1">
-                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
+                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Search somthing..."
                                 aria-label="Search">
                             <div class="input-group-append">
                                 <button class="btn bg-primary text-light my-2 my-sm-0" type="submit">
@@ -35,13 +34,13 @@
                         </div>
                     </form>
                 </div>
-                <a href="/index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
+                <a href="index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
                     <i class="fas fa-home"></i>
                 </a>
-                <a href="/search.html" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
+                <a href="#" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
                     <i class="fas fa-search"></i>
                 </a>
-                <a href="#" class="btn btn-light mr-1 " title="Tài khoản">
+                <a href="login.html" class="btn btn-light mr-1 " title="Tài khoản">
                     <i class="fas fa-user"></i>
                 </a>
                 <button class="btn btn-outline-dark mr-1" data-toggle="modal" data-target="#myCart">
@@ -52,26 +51,25 @@
         </nav>
         <div class="secondary-navbar bg-light">
             <div class="w-100 clearfix bg-dark d-block d-lg-none">
-                <span class="mx-4 my-2 text-light float-left">DANH MỤC</span>
-                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false"
+                <span class="mx-4 my-2 text-light float-left">MENU</span>
+                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapseTopNav" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars text-light"></i>
                 </button>
             </div>
-            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="navbarSupportedContent">
+            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="collapseTopNav">
                 <ul class="nav justify-content-center sp1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">BOOK</a>
+                        <a class="nav-link text-dark" href="index.html">STORE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">TEXTBOOKS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">AUDIO BOOKS</a>
+                        <a class="nav-link text-dark" href="product.html">PRODUCT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">MAGAZINES</a>
+                        <a class="nav-link text-dark" href="category.html">CATEGORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="login.html">LOGIN</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="contact.html">CONTACT</a>
@@ -87,7 +85,7 @@
         <section class="row w-100 m-0 slides-show">
             <div class="col px-0 w-100 m-0">
                 <div class="owl-carousel owl-carousel-primary owl-theme">
-                    <div class="item">
+                    <!-- <div class="item">
                         <a href="product.html">
                             <img class="owl-lazy" data-src="images/slide-1.png" alt="">
                         </a>
@@ -96,14 +94,14 @@
                         <a href="product.html">
                             <img class="owl-lazy" data-src="images/slide-2.png" alt="">
                         </a>
-                    </div>
+                    </div> -->
                     <div class="item">
-                        <a href="product.html">
+                        <a href="#">
                             <img class="owl-lazy" data-src="images/slide-3.png" alt="">
                         </a>
                     </div>
                     <div class="item">
-                        <a href="product.html">
+                        <a href="#">
                             <img class="owl-lazy" data-src="images/slide-4.png" alt="">
                         </a>
                     </div>
@@ -112,30 +110,14 @@
         </section>
 
         <div class="container">
-            <!-- <div class="row audioBook mt-3">
-                <div class="col-12">
-                    <div class="card flex-md-row mb-4 box-shadow h-md-250 border-0" style="background-color: #e0f7fa;">
-                        <div class="card-body d-flex flex-column audio-book">
-                            <h3 class="mb-0 ml-5 mt-5">
-                                <a class="text-dark" href="#">Audio Book Now Available</a>
-                            </h3>
-                            <p class="ml-5">
-                                <a href="#" class="btn btn-outline-dark mt-5">Tìm hiểu thêm</a>
-                            </p>
-                        </div>
-                        <img class="card-img-right flex-auto d-sm-block" style="width: 50%; height: 50%;" src="images/audio-book.webp" data-holder-rendered="true">
-                    </div>
-                </div>
-            </div> -->
-
-            <div class="row recommend mb-3">
+            <div class="row recommend">
                 <div class="col-12 product-header py-3 mb-sm-3 mb-md-0 clearfix">
                     <h3 class="title display-4">Recommend For You</h3>
                 </div>
                 <div class="col-12">
                     <div class="recommend-list row _owl-carousel owl-theme w-100 m-0 p-0">
-                        <div id="book-1" class="col-12 col-lg-4 p-3">
-                            <a href="product.html">
+                        <div id="book-1" class="item col-12 col-lg-4 p-3">
+                            <a href="#">
                                 <div class="box-horizontal d-flex">
                                     <div class="box-image w-50 mr-3">
                                         <img src="images/book-1.png" alt="" class="w-100">
@@ -143,22 +125,23 @@
                                     <div class="box-body">
                                         <h3 class="display-5 text-light mt-5">A Step-By-Step Survival Guide</h3>
                                         <p class="author text-light">Agile</p>
-                                        <div class="reason-set">
+                                        <div class="reason-set d-block">
                                             <div class="star-container">
                                                 <div class="tiny-star">
                                                     <div class="current-rating" style="width: 90%;"></div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <span class="btn btn-light mt-3">LEARN MORE</span>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div id="book-2" class="col-12 col-md-6 col-lg-4 p-3">
-                            <a href="product.html">
+                        <div id="book-2" class="item col-12 col-md-6 col-lg-4 p-3">
+                            <a href="#">
                                 <div class="box-horizontal d-flex">
                                     <div class="box-image w-50 mr-3">
-                                        <img src="images/book-2.jpg" alt="" class="w-100">
+                                        <img src="images/book-2.png" alt="" class="w-100">
                                     </div>
                                     <div class="box-body">
                                         <h3 class="display-5 text-light mt-5">How To Be The Perfect Dutch</h3>
@@ -170,15 +153,16 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <span class="btn btn-light mt-3">LEARN MORE</span>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div id="book-3" class="col-12 col-md-6 col-lg-4 p-3">
-                            <a href="product.html">
+                        <div id="book-3" class="item col-12 col-md-6 col-lg-4 p-3">
+                            <a href="#">
                                 <div class="box-horizontal d-flex">
                                     <div class="box-image w-50 mr-3">
-                                        <img src="images/book-3.jpg" alt="" class="w-100">
+                                        <img src="images/book-3.png" alt="" class="w-100">
                                     </div>
                                     <div class="box-body">
                                         <h3 class="display-5 text-light mt-5">A Million Miles in a Thousand Years</h3>
@@ -190,6 +174,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <span class="btn btn-light mt-3">LEARN MORE</span>
                                     </div>
                                 </div>
                             </a>
@@ -198,318 +183,194 @@
                 </div>
             </div>
 
-            <div class="row product-list">
+            <div class="row product-list mt-3">
                 <div class="col-12 product-header py-md-3 mb-sm-3 mb-md-0 clearfix">
-                    <h3 class="title display-4">TOP sách bán chạy trong tháng</h3>
+                    <h3 class="title display-4">Best Seller</h3>
                 </div>
                 <div class="col-12 product-content py-md-3">
                     <div class="row">
                         <div id="item_1" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-1.jpg">
-                                    <div class="product-gift bg-danger">
-                                        <i class="fas fa-gift"></i> -30%
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
+                            <a href="#">
+                                <div class="row p-3">
+                                    <div class="col-5 p-0">
+                                        <img class="img-thumbnail" src="images/book-1.png">
+                                        <div class="product-gift bg-danger">
+                                            <i class="fas fa-gift"></i> -30%
                                         </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
+                                    </div>
+                                    <div class="col-7">
+                                        <h3 class="h5 text-dark">A Step-by-Step Survival Guide</h3>
+                                        <p class="author text-dark">Agile</p>
+                                        <div class="reason-set clearfix">
+                                            <div class="star-container">
+                                                <div class="tiny-star">
+                                                    <div class="current-rating" style="width: 90%;"></div>
+                                                </div>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="full-price text-muted">$20</span>
+                                                <span class="display-price">$15</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div id="item_2" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-2.jpg">
-                                    <div class="product-gift bg-danger">
-                                        <i class="fas fa-gift"></i> -30%
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
+                            <a href="#">
+                                <div class="row p-3">
+                                    <div class="col-5 p-0">
+                                        <img class="img-thumbnail" src="images/product-2.jpg">
+                                        <div class="product-gift bg-danger">
+                                            <i class="fas fa-gift"></i> -30%
                                         </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
+                                    </div>
+                                    <div class="col-7">
+                                        <h3 class="h5 text-dark">Call Me By Your Name</h3>
+                                        <p class="author text-dark">Anre Aciman</p>
+                                        <div class="reason-set clearfix">
+                                            <div class="star-container">
+                                                <div class="tiny-star">
+                                                    <div class="current-rating" style="width: 100%;"></div>
+                                                </div>
+                                            </div>
+                                            <p class="product-price">
+                                                <span class="full-price text-muted">$39</span>
+                                                <span class="display-price">$23</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div id="item_3" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-3.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
+                            <a href="#">
+                                <div class="row p-3">
+                                    <div class="col-5 p-0">
+                                        <img class="img-thumbnail" src="images/product-3.jpg">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3 class="h5 text-dark">The Untethered Soul</h3>
+                                        <p class="author text-dark">Michael A.Singer</p>
+                                        <div class="reason-set clearfix">
+                                            <div class="star-container">
+                                                <div class="tiny-star">
+                                                    <div class="current-rating" style="width: 45%;"></div>
+                                                </div>
                                             </div>
+                                            <p class="product-price">
+                                                <span class="full-price text-muted">$25</span>
+                                                <span class="display-price">$19</span>
+                                            </p>
                                         </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div id="item_4" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-4.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
+                            <a href="#">
+                                <div class="row p-3">
+                                    <div class="col-5 p-0">
+                                        <img class="img-thumbnail" src="images/product-4.jpg">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3 class="h5 text-dark">Cay Chuoi Non Di Giay Xanh</h3>
+                                        <p class="author text-dark">Nguyen Nhat Anh</p>
+                                        <div class="reason-set clearfix">
+                                            <div class="star-container">
+                                                <div class="tiny-star">
+                                                    <div class="current-rating" style="width: 95%;"></div>
+                                                </div>
                                             </div>
+                                            <p class="product-price">
+                                                <span class="full-price text-muted">$30</span>
+                                                <span class="display-price">$15</span>
+                                            </p>
                                         </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div id="item_5" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-5.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
+                            <a href="#">
+                                <div class="row p-3">
+                                    <div class="col-5 p-0">
+                                        <img class="img-thumbnail" src="images/product-5.jpg">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3 class="h5 text-dark">Man's Searh For Meaning</h3>
+                                        <p class="author text-dark">Viktor E.Frankl</p>
+                                        <div class="reason-set clearfix">
+                                            <div class="star-container">
+                                                <div class="tiny-star">
+                                                    <div class="current-rating" style="width: 0%;"></div>
+                                                </div>
                                             </div>
+                                            <p class="product-price">
+                                                <span class="full-price text-muted">$25</span>
+                                                <span class="display-price">$10</span>
+                                            </p>
                                         </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div id="item_6" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-6.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
+                            <a href="#">
+                                <div class="row p-3">
+                                    <div class="col-5 p-0">
+                                        <img class="img-thumbnail" src="images/book-3.png">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3 class="h5 text-dark">A Million Miles in a Thousand Years</h3>
+                                        <p class="author text-dark">Donald Miller</p>
+                                        <div class="reason-set clearfix">
+                                            <div class="star-container">
+                                                <div class="tiny-star">
+                                                    <div class="current-rating" style="width: 76%;"></div>
+                                                </div>
                                             </div>
+                                            <p class="product-price">
+                                                <span class="full-price text-muted">$36</span>
+                                                <span class="display-price">$27</span>
+                                            </p>
                                         </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-12 text-right">
-                    <a href="category.html" class="btn btn-outline-success">Xem thêm <i class="fas fa-chevron-right"></i></a>
+                    <a href="category.html" class="btn btn-outline-success">MORE <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
 
-            <div class="row product-list">
-                <div class="col-12 product-header py-md-3 mb-sm-3 mb-md-0 clearfix">
-                    <h3 class="title display-4">Sách mới phát hành</h3>
-                </div>
-                <div class="col-12 product-content py-md-3">
-                    <div class="row">
-                        <div id="item_1" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-1.jpg">
-                                    <div class="product-gift bg-danger">
-                                        <i class="fas fa-gift"></i> -30%
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
-                                        </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row audioBook mt-3">
+                <div class="col-12">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250 border-0" style="background-color: #e0f7fa;">
+                        <div class="card-body d-flex flex-column audio-book">
+                            <h3 class="mb-0 ml-5 mt-5">
+                                <a class="text-dark" href="#!">Audio Book Now Available</a>
+                            </h3>
+                            <p class="ml-5">
+                                <a href="#" class="btn btn-outline-dark mt-5">Learn More</a>
+                            </p>
                         </div>
-                        <div id="item_2" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-2.jpg">
-                                    <div class="product-gift bg-danger">
-                                        <i class="fas fa-gift"></i> -30%
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
-                                        </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="item_3" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-3.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
-                                        </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="item_4" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-4.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
-                                        </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="item_5" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-5.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
-                                        </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="item_6" class="item col-12 col-md-6 col-xl-4">
-                            <div class="row p-3">
-                                <div class="col-5 p-0">
-                                    <img class="img-thumbnail" src="images/product-6.jpg">
-                                </div>
-                                <div class="col-7">
-                                    <h3 class="h5">Gửi Thời Đơn Thuần Đẹp Đẽ Của Chúng Ta</h3>
-                                    <p class="author">Triệu Kiều Kiến</p>
-                                    <div class="reason-set clearfix">
-                                        <div class="star-container d-inline-block">
-                                            <div class="tiny-star">
-                                                <div class="current-rating" style="width: 90%;"></div>
-                                            </div>
-                                        </div>
-                                        <p class="product-price float-right">
-                                            <span class="full-price">đ199.000</span>
-                                            <span class="display-price">đ139.000</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
+                        <img class="card-img-right flex-auto d-sm-block w-50 h-50" src="images/audio-book.webp" data-holder-rendered="true">
                     </div>
                 </div>
-                <div class="col-12 text-right">
-                    <a href="category.html" class="btn btn-outline-success">Xem thêm <i class="fas fa-chevron-right"></i></a>
-                </div>
             </div>
+
         </div>
 
-        <div class="bg-dark text-light register mt-3">
+        <div class="bg-dark text-light register">
             <div class="container">
                 <div class="row py-md-3 mb-3 mb-md-0">
                     <div class="col-12 col-md-4 mt-5 mt-lg-0">
                         <img src="images/mail.png" class="w-25 mb-3 d-none d-md-block" alt="">
-                        <h2>ĐĂNG KÝ NHẬN EMAIL</h2>
-                        <p class="caption">Đăng ký để nhận thông tin sách mới, sách bán chạy và khuyến mãi từ Book Shop</p>
+                        <h2>Get our Newsletter</h2>
+                        <p class="caption">Stay on top of the latest and greatest</p>
                     </div>
                     <div class="col-12 col-md-8">
                         <div class="input-group input-group-lg py-5">
@@ -520,7 +381,7 @@
                             </div>
                             <input type="email" class="form-control" placeholder="example@example.com" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                             <div class="input-group-append">
-                                <button class="btn bg-success text-light" type="button">Đăng ký</button>
+                                <button class="btn bg-success text-light" type="button">SUBSCRIBE</button>
                             </div>
                         </div>
                     </div>
@@ -625,7 +486,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Thông tin giỏ hàng</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Your Cart</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -639,24 +500,24 @@
                             <div class="col-8">
                                 <h3>A Step-by-Step Sutvival Guide</h3>
                                 <p class="author">Agile</p>
-                                <p class="display-price text-danger h4">₫&nbsp;54.000</p>
-                                <p>Số lượng: 4</p>
+                                <p class="display-price text-danger h4">$60</p>
+                                <p>4 Products</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Thanh toán</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Pay Now</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -4,17 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Book Shop</title>
+    <title>Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/main.css">
-
-
 </head>
 
 <body>
@@ -22,12 +19,12 @@
         <nav class="navbar navbar-expand-lg sticky-nav">
             <div class="container">
                 <a class="navbar-brands d-none d-lg-block" href="index.html">
-                    <img src="images/logo.png" class="w-50 " alt="BookShop Logo">
+                    <img src="images/logo.png" class="w-100 logo " alt="BookShop Logo">
                 </a>
                 <div class="d-none d-lg-block w-100">
                     <form class="form-inline my-2 my-lg-0 w-100">
                         <div class="input-group w-100 mr-1">
-                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
+                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Search somthing..."
                                 aria-label="Search">
                             <div class="input-group-append">
                                 <button class="btn bg-primary text-light my-2 my-sm-0" type="submit">
@@ -37,13 +34,13 @@
                         </div>
                     </form>
                 </div>
-                <a href="/index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
+                <a href="index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
                     <i class="fas fa-home"></i>
                 </a>
-                <a href="/search.html" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
+                <a href="#" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
                     <i class="fas fa-search"></i>
                 </a>
-                <a href="#" class="btn btn-light mr-1 " title="Tài khoản">
+                <a href="login.html" class="btn btn-light mr-1 " title="Tài khoản">
                     <i class="fas fa-user"></i>
                 </a>
                 <button class="btn btn-outline-dark mr-1" data-toggle="modal" data-target="#myCart">
@@ -54,26 +51,25 @@
         </nav>
         <div class="secondary-navbar bg-light">
             <div class="w-100 clearfix bg-dark d-block d-lg-none">
-                <span class="mx-4 my-2 text-light float-left">DANH MỤC</span>
-                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false"
+                <span class="mx-4 my-2 text-light float-left">MENU</span>
+                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapseTopNav" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars text-light"></i>
                 </button>
             </div>
-            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="navbarSupportedContent">
+            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="collapseTopNav">
                 <ul class="nav justify-content-center sp1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">BOOK</a>
+                        <a class="nav-link text-dark" href="index.html">STORE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">TEXTBOOKS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">AUDIO BOOKS</a>
+                        <a class="nav-link text-dark" href="product.html">PRODUCT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">MAGAZINES</a>
+                        <a class="nav-link text-dark" href="category.html">CATEGORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="login.html">LOGIN</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="contact.html">CONTACT</a>
@@ -96,25 +92,24 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Contact Us</h5>
-                            <p class="card-text">Bạn gặp vấn đề? Bạn cần hỗ trợ. Hãy nhập thông tin để liên hệ với chúng tôi. Chúng tôi sẽ cố
-                                gắng giải đáp mọi thắc mắc của bạn.</p>
+                            <p class="card-text text-muted">You have problems? Do you need support. Please enter your information to contact us. We will try to answer all your questions.</p>
                         </div>
-                        <form class="mx-3" action="#!">
+                        <div class="mx-3">
                             <div class="form-group">
                                 <label for="MyEmail">Email address</label>
                                 <input type="email" class="form-control" id="myEmail" aria-describedby="emailHelp" placeholder="name@example.com">
-                                <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với ai khác.</small>
+                                <small id="emailHelp" class="form-text text-muted">We never share your email to anyone.</small>
                             </div>
                             <div class="form-group">
                                 <label for="myPhoneNumber">Phone number</label>
                                 <input type="text" class="form-control" id="myPhoneNumber" aria-describedby="emailHelp" placeholder="+84">
-                                <small id="phoneHelp" class="form-text text-muted">0123456780</small>
+                                <small id="phoneHelp" class="form-text text-muted">Ex: 0123456780</small>
                             </div>
-                            <button type="submit" id="contactBtn" class="btn btn-primary">Gửi</button>
-                        </form>
+                            <button type="submit" id="contactBtn" class="btn btn-primary">Feedback</button>
+                        </div>
                         <div class="card-body">
-                            <a href="#" class="card-link text-dark">0123.456.789</a>
-                            <a href="#" class="card-link text-dark">helps@email.bookshop.com</a>
+                            <a href="tel:+84985552473" class="card-link text-dark">0123.456.789</a>
+                            <a href="mail:helps@email.bookshop.com" class="card-link text-dark">helps@email.bookshop.com</a>
                         </div>
                     </div>
                 </div>
@@ -223,7 +218,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Thông tin giỏ hàng</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Your Cart</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -237,14 +232,14 @@
                             <div class="col-8">
                                 <h3>A Step-by-Step Sutvival Guide</h3>
                                 <p class="author">Agile</p>
-                                <p class="display-price text-danger h4">₫&nbsp;54.000</p>
-                                <p>Số lượng: 4</p>
+                                <p class="display-price text-danger h4">$60</p>
+                                <p>4 Products</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Thanh toán</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Pay Now</button>
                 </div>
             </div>
         </div>
@@ -254,7 +249,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Thông báo</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Notification</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -263,29 +258,24 @@
                     <img src="images/mail-2.png" class="w-25" alt="">
                     <p class="display-4 font-weight-bold">Thank You</p>
                     <p>
-                        Xin chào
-                        <span class="font-weight-bold" id="contactEmail"></span>, cảm ơn bạn đã liên hệ với chúng tôi.
+                        Hello
+                        <span class="font-weight-bold" id="contactEmail"></span>, thanks for contact us. <br>
+                        Your message will be sent.
                     </p>
                     <p>
-                        Số điện
+                        Your phone number
                         <span class="font-weight-bold" id="contactPhoneNumber"></span>.
                     </p>
-                </div>
-                <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 

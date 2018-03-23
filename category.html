@@ -4,17 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Book Shop</title>
+    <title>Category</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/main.css">
-
-
 </head>
 
 <body>
@@ -22,12 +19,12 @@
         <nav class="navbar navbar-expand-lg sticky-nav">
             <div class="container">
                 <a class="navbar-brands d-none d-lg-block" href="index.html">
-                    <img src="images/logo.png" class="w-50 " alt="BookShop Logo">
+                    <img src="images/logo.png" class="w-100 logo " alt="BookShop Logo">
                 </a>
                 <div class="d-none d-lg-block w-100">
                     <form class="form-inline my-2 my-lg-0 w-100">
                         <div class="input-group w-100 mr-1">
-                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
+                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Search somthing..."
                                 aria-label="Search">
                             <div class="input-group-append">
                                 <button class="btn bg-primary text-light my-2 my-sm-0" type="submit">
@@ -37,13 +34,13 @@
                         </div>
                     </form>
                 </div>
-                <a href="/index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
+                <a href="index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
                     <i class="fas fa-home"></i>
                 </a>
-                <a href="/search.html" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
+                <a href="#" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
                     <i class="fas fa-search"></i>
                 </a>
-                <a href="#" class="btn btn-light mr-1 " title="Tài khoản">
+                <a href="login.html" class="btn btn-light mr-1 " title="Tài khoản">
                     <i class="fas fa-user"></i>
                 </a>
                 <button class="btn btn-outline-dark mr-1" data-toggle="modal" data-target="#myCart">
@@ -54,26 +51,25 @@
         </nav>
         <div class="secondary-navbar bg-light">
             <div class="w-100 clearfix bg-dark d-block d-lg-none">
-                <span class="mx-4 my-2 text-light float-left">DANH MỤC</span>
+                <span class="mx-4 my-2 text-light float-left">MENU</span>
                 <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapseTopNav" aria-expanded="false"
-                    aria-label="Toggle navigation" aria-controls="collapseTopNav">
+                    aria-label="Toggle navigation">
                     <i class="fas fa-bars text-light"></i>
                 </button>
             </div>
-            <div id="collapseTopNav" class="container collapse navbar-collapse collapse-mb d-lg-block" id="navbarSupportedContent">
+            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="collapseTopNav">
                 <ul class="nav justify-content-center sp1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">BOOK</a>
+                        <a class="nav-link text-dark" href="index.html">STORE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">TEXTBOOKS</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">AUDIO BOOKS</a>
+                        <a class="nav-link text-dark" href="product.html">PRODUCT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">MAGAZINES</a>
+                        <a class="nav-link text-dark" href="category.html">CATEGORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="login.html">LOGIN</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="contact.html">CONTACT</a>
@@ -91,205 +87,221 @@
                 <div class="col-12 main-category">
                     <div class="row">
                         <div id="categoryContent" class="col-12 col-lg-3 mt-3">
-                            <div id="categoryHeader" class="header clearfix bg-dark">
-                                <span class="float-left mx-3 my-2 text-light">Danh mục sách</span>
+                            <div id="categoryHeader" class="header clearfix bg-light">
+                                <span class="float-left mx-3 my-2">CATEGORY MENU</span>
                                 <a class="btn btn-light float-right d-block d-lg-none" data-toggle="collapse" href="#collapseCategory" aria-expanded="true" aria-controls="collapseCategory">
                                     <i class="fas fa-bars"></i>
                                 </a>
                             </div>
                             <div id="collapseCategory" class="collapse d-lg-block border" aria-labelledby="categoryHeader" data-parent="#categoryContent">
                                 <ul class="show list-group list-group-flush">
-                                    <li class="list-group-item">Sách Tiếng Việt</li>
-                                    <li class="list-group-item active">Sách văn học nước ngoài</li>
-                                    <li class="list-group-item">Sách kinh tế</li>
-                                    <li class="list-group-item">Sách thường thức - đời sống</li>
-                                    <li class="list-group-item">Sách thiếu nhi</li>
-                                    <li class="list-group-item">Sách tin học - ngoại ngữ</li>
-                                    <li class="list-group-item">Sách chuyên ngành</li>
-                                    <li class="list-group-item">Sách giáo khoa - giáo trình</li>
-                                    <li class="list-group-item">Tạp chí - văn phòng phẩm</li>
+                                    <li class="list-group-item"><a href="#">Vietnamese</a></li>
+                                    <li class="list-group-item active">Other Contry</li>
+                                    <li class="list-group-item"><a href="#">Economics</a></li>
+                                    <li class="list-group-item"><a href="#">Life</a></li>
+                                    <li class="list-group-item"><a href="#">Children</a></li>
+                                    <li class="list-group-item"><a href="#">Techonogy - Language</a></li>
+                                    <li class="list-group-item"><a href="#">Study - Major</a></li>
+                                    <li class="list-group-item"><a href="#">Audio Book</a></li>
+                                    <li class="list-group-item"><a href="#">Magazines - Office</a></li>
                                 </ul>
                             </div>          
                         </div>
                         <div class="col-12 col-lg-9 category-show product-content">
-                            <h3 class="display-4 mx-3">Mới phát hành</h3>
+                            <h3 class="display-4 mx-3">New Book</h3>
                             <div class="row my-3">
-                                <div id="item1" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/book-3.jpg" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>A Million Miles in a Thousand Years</h4>
-                                            <p class="author d-none d-lg-block">Donald Miller</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 90%;"></div>
+                                <div id="itemNewBook_1" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/book-3.png" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">A Million Miles in a Thousand Years</h4>
+                                                <p class="author text-dark">Donald Miller</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container d-none d-lg-block">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 60%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$27</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ78.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div id="item2" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/book-2.jpg" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>How To Be The PERFECT Dutch</h4>
-                                            <p class="author d-none d-lg-block">Kathian Brands</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 83%;"></div>
+                                <div id="itemNewBook_2" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/book-2.png" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">How To Be The PERFECT Dutch</h4>
+                                                <p class="author text-dark">Kathian Brands</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 100%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$55</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ78.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
-                            <h3 class="display-4 mx-3">Sách văn học nước ngoài</h3>
+                            <h3 class="display-4 mx-3">Other Contry</h3>
                             <div class="row my-3">
-                                <div id="item1" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/book-3.jpg" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>A Million Miles in a Thousand Years</h4>
-                                            <p class="author d-none d-lg-block">Donald Miller</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 90%;"></div>
+                                <div id="itemBook_1" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/book-1.png" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">A Step-by-Step Survival Guide</h4>
+                                                <p class="author text-dark">Agile</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container d-none d-lg-block">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 60%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$15</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ78.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div id="item2" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/book-2.jpg" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>How To Be The PERFECT Dutch</h4>
-                                            <p class="author d-none d-lg-block">Kathian Brands</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 83%;"></div>
+                                <div id="itemBook_2" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/product-2.jpg" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">Call Me By Your Name</h4>
+                                                <p class="author text-dark">Anre Aciman</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container d-none d-lg-block">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 70%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$23</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ78.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div id="item3" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/book-1.png" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>A Step-by-Step Survival Guide</h4>
-                                            <p class="author d-none d-lg-block">Agile</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 90%;"></div>
+                                <div id="itemBook_3" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/product-3.jpg" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">The Untethered Soul</h4>
+                                                <p class="author text-dark">Michael A.Singer</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container d-none d-lg-block">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 80%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$19</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ78.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div id="item4" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/product-1.jpg" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>A Step-by-Step Survival Guide</h4>
-                                            <p class="author d-none d-lg-block">Agile</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 90%;"></div>
+                                <div id="itemBook_4" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/product-5.jpg" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">Man's Search For Meaning</h4>
+                                                <p class="author text-dark">Viktor E.Frankl</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container d-none d-lg-block">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 0%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$10</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ78.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div id="item5" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/product-2.jpg" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>Gọi Em Bằng Tên Anh</h4>
-                                            <p class="author d-none d-lg-block">André Acimen</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 90%;"></div>
+                                <div id="itemBook_5" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/book-2.png" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">How To Be The PERFECT Dutch</h4>
+                                                <p class="author text-dark">Kathian Brands</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 100%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$55</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ78.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div id="item6" class="item col-12 col-lg-6">
-                                    <div class="row p-3">
-                                        <div class="col-5">
-                                            <img src="images/product-6.jpg" class="img-thumbnail" alt="">
-                                        </div>
-                                        <div class="col-7">
-                                            <h4>Địch Công Kỳ Án</h4>
-                                            <p class="author d-none d-lg-block">Agile</p>
-                                            <div class="reason-set">
-                                                <div class="star-container d-none d-lg-block">
-                                                    <div class="tiny-star">
-                                                        <div class="current-rating" style="width: 90%;"></div>
+                                <div id="itemBook_6" class="item col-12 col-lg-6">
+                                    <a href="#">
+                                        <div class="row p-3">
+                                            <div class="col-5">
+                                                <img src="images/book-3.png" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h4 class="text-dark">A Million Miles in a Thousand Years</h4>
+                                                <p class="author text-dark">Donald Miller</p>
+                                                <div class="reason-set">
+                                                    <div class="star-container d-none d-lg-block">
+                                                        <div class="tiny-star">
+                                                            <div class="current-rating" style="width: 60%;"></div>
+                                                        </div>
                                                     </div>
+                                                    <p class="product-price">
+                                                        <span class="display-price">$27</span>
+                                                    </p>
                                                 </div>
-                                                <p class="product-price">
-                                                    <span class="display-price">đ110.000</span>
-                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <nav aria-label="Page navigation clearfix w-100">
                                 <ul class="pagination float-right mt-5">
                                     <li class="page-item">
-                                        <a class="page-link text-dark" href="#">Trước</a>
+                                        <a class="page-link text-dark" href="#">Prev</a>
                                     </li>
                                     <li class="page-item">
                                         <a class="page-link bg-primary text-light" href="#">1</a>
@@ -307,7 +319,7 @@
                                         <a class="page-link text-dark" href="#">23</a>
                                     </li>
                                     <li class="page-item">
-                                        <a class="page-link text-dark" href="#">Tiếp</a>
+                                        <a class="page-link text-dark" href="#">Next</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -414,7 +426,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Thông tin giỏ hàng</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Your Cart</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -428,27 +440,24 @@
                             <div class="col-8">
                                 <h3>A Step-by-Step Sutvival Guide</h3>
                                 <p class="author">Agile</p>
-                                <p class="display-price text-danger h4">₫&nbsp;54.000</p>
-                                <p>Số lượng: 4</p>
+                                <p class="display-price text-danger h4">$60</p>
+                                <p>4 Products</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Thanh toán</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Pay Now</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 

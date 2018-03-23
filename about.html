@@ -4,17 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Book Shop</title>
+    <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/main.css">
-
-
 </head>
 
 <body>
@@ -22,12 +19,12 @@
         <nav class="navbar navbar-expand-lg sticky-nav">
             <div class="container">
                 <a class="navbar-brands d-none d-lg-block" href="index.html">
-                    <img src="images/logo.png" class="w-50 " alt="BookShop Logo">
+                    <img src="images/logo.png" class="w-100 logo " alt="BookShop Logo">
                 </a>
                 <div class="d-none d-lg-block w-100">
                     <form class="form-inline my-2 my-lg-0 w-100">
                         <div class="input-group w-100 mr-1">
-                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Tìm kiếm sách, tác giả, chủ đề..."
+                            <input class="form-control _mr-sm-2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" type="search" placeholder="Search somthing..."
                                 aria-label="Search">
                             <div class="input-group-append">
                                 <button class="btn bg-primary text-light my-2 my-sm-0" type="submit">
@@ -37,13 +34,13 @@
                         </div>
                     </form>
                 </div>
-                <a href="/index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
+                <a href="index.html" class="btn btn-light mr-1 d-block d-lg-none" title="Home">
                     <i class="fas fa-home"></i>
                 </a>
-                <a href="/search.html" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
+                <a href="#" class="btn btn-light mr-1 d-block d-lg-none" title="Tìm kiếm">
                     <i class="fas fa-search"></i>
                 </a>
-                <a href="#" class="btn btn-light mr-1 " title="Tài khoản">
+                <a href="login.html" class="btn btn-light mr-1 " title="Tài khoản">
                     <i class="fas fa-user"></i>
                 </a>
                 <button class="btn btn-outline-dark mr-1" data-toggle="modal" data-target="#myCart">
@@ -54,26 +51,25 @@
         </nav>
         <div class="secondary-navbar bg-light">
             <div class="w-100 clearfix bg-dark d-block d-lg-none">
-                <span class="mx-4 my-2 text-light float-left">DANH MỤC</span>
-                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false"
+                <span class="mx-4 my-2 text-light float-left">MENU</span>
+                <button class="mx-4 my-2 navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapseTopNav" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars text-light"></i>
                 </button>
             </div>
-            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="navbarSupportedContent">
+            <div class="container collapse navbar-collapse collapse-mb d-lg-block" id="collapseTopNav">
                 <ul class="nav justify-content-center sp1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">BOOK</a>
+                        <a class="nav-link text-dark" href="index.html">STORE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">TEXTBOOKS</a>
-                    </li>
-            
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">AUDIO BOOKS</a>
+                        <a class="nav-link text-dark" href="product.html">PRODUCT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="category.html">MAGAZINES</a>
+                        <a class="nav-link text-dark" href="category.html">CATEGORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="login.html">LOGIN</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="contact.html">CONTACT</a>
@@ -87,25 +83,24 @@
     </header>
     <main>
         <div class="container">
-            <h2 class="display-2"><img src="images/logo.png" alt=""></h2>
-            <p>BookShop được lập từ 03/2018 với ý tưởng mang đến cho những người yêu sách một cửa hàng tiện lợi nhanh chóng.</p>
-            <p>Chúng tôi chuyên cung cấp giải pháp ưu đãi cho người dùng, với nhiều chương trình ưu đãi hấp dẫn. Ngoài ra chúng
-                tôi còn liên kết tới các nhà văn và nhà phát hành để đem lại cho bạn một trải nghiệm tuyệt vời với nhiều
-                ưu đãi đặc biệt mà chỉ có tại BookShop.</p>
-            <p>Ở BookShop chúng tôi nỗ lực ngày đêm để lại cho bạn một cửa hàng hoạt động một cách trơn tru và đảm bảo quyền
-                lợi cho khách hàng. Với phương trâm "khách hàng là thượng đế".</p>
+            <h2 class="display-2"><img src="images/logo.png" alt="" class="w-50"></h2>
+            <p>BookShop was created from 03/2018 with the idea of bringing book lovers to a convenience store quickly.</p>
+            <p>We specialize in offering user-friendly solutions, with many attractive offers. We also link to writers and publishers to
+            give you a great experience with many special offers that are only available at BookShop.</p>
+            <p>At BookShop, we strive to keep your shop running smoothly and to ensure the benefits for our customers. With the motto "customers
+            are god".</p>
             <ul>
-                <li>Dịch vụ chăm sóc khách hàng 24/̃</li>
-                <li>Giá sản phẩm nhiều ưu đãi đặc biệt</li>
-                <li>Giao hàng miễn phí (đối với các sản phẩm trên 100.000đ)</li>
+                <li>Customer service 24/7</li>
+                <li>Price of many special incentive products</li>
+                <li>Free shipping (for products over 10.0 Dolar)</li>
             </ul>
-            <h3>Thông tin liên hệ</h3>
+            <h3>Contact Info</h3>
             <ul>
-                <li>Số điện thoại: 0123.456.789</li>
-                <li>Địa chỉ email: help@email.bookshop.com</li>
-                <li>Địa chỉ: 01 Hacker Quận IT - Hồ Chí Minh city</li>
+                <li>Phone number: 0123.456.789</li>
+                <li>Email address: help@email.bookshop.com</li>
+                <li>Address: 01 Hacker District IT - Ho Chi Minh city</li>
             </ul>
-            <h3>Văn phòng công ty</h3>
+            <h3>Company office</h3>
             <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125089.63988210094!2d107.7259766341702!3d11.548181704457598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3173f612f8f3394f%3A0xf74104c82d2efd01!2zQuG6o28gTOG7mWMsIEzDom0gxJDhu5NuZywgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1521192537036"
                 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
@@ -207,7 +202,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Thông tin giỏ hàng</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Your Cart</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -221,27 +216,24 @@
                             <div class="col-8">
                                 <h3>A Step-by-Step Sutvival Guide</h3>
                                 <p class="author">Agile</p>
-                                <p class="display-price text-danger h4">₫&nbsp;54.000</p>
-                                <p>Số lượng: 4</p>
+                                <p class="display-price text-danger h4">$60</p>
+                                <p>4 Products</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Thanh toán</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Pay Now</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 
